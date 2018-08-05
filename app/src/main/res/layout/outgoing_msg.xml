@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="10dp"
+    android:paddingRight="15dp"
+    android:paddingLeft="60dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/outgoing_msg_bg"
+        android:padding="10dp"
+        android:elevation="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_text"
+            android:background="@drawable/outgoing_msg_bg"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:fontFamily="@font/lato_regular"
+            tools:text="Placeholder message"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/receivedTime"
+            tools:text="05:44PM"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

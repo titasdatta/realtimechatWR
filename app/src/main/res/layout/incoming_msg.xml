@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="10dp"
+    android:paddingRight="60dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/incoming_msg_bg"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            tools:text="Rose"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato_regular"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_text"
+            android:elevation="2dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/lato_regular"
+            tools:text="How are you doing? This is a long message that should probably wrap."
+            />
+        <TextView
+            android:id="@+id/receivedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:fontFamily="@font/lato_regular"
+            tools:text="05:44 PM"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
