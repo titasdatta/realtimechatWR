@@ -21,4 +21,7 @@ interface ConversationDao {
 
     @Insert
     fun addBulkMessages(messageList: List<Message>)
+
+    @Query("DELETE FROM conversationList")
+    fun deleteAll()
 }
