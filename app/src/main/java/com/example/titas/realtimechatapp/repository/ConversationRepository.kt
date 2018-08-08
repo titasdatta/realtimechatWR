@@ -37,7 +37,10 @@ class ConversationRepository @Inject constructor(val conversationDao: Conversati
     }
 
     override fun onHistoryMessagesReceived(messageList: List<Message>) {
-        mutableListOfMessages.postValue(messageList)
+//        mutableListOfMessages.postValue(messageList)
+        runOnIoThread {
+            conversationDao.addBulkMessages(messageList)
+        }
     }
 
 

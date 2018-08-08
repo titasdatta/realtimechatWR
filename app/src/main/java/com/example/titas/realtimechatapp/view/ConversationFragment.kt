@@ -66,15 +66,15 @@ class ConversationFragment : Fragment() {
             }
         }
 
-        conversationViewModel.getHistoryConversationObservable().observe(this, object : Observer<List<Message>>{
-            override fun onChanged(t: List<Message>?) {
-                if(t != null && t.isNotEmpty()) {
-                    updateConversationList(t)
-                    conversationViewModel.getHistoryConversationObservable().removeObservers(this@ConversationFragment)
-                }
-            }
-
-        })
+//        conversationViewModel.getHistoryConversationObservable().observe(this, object : Observer<List<Message>>{
+//            override fun onChanged(t: List<Message>?) {
+//                if(t != null && t.isNotEmpty()) {
+//                    updateConversationList(t)
+//                    conversationViewModel.getHistoryConversationObservable().removeObservers(this@ConversationFragment)
+//                }
+//            }
+//
+//        })
 
         conversationLiveData.observe(this, object : Observer<List<Message>>{
             override fun onChanged(t: List<Message>?) {

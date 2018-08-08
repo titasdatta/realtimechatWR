@@ -18,4 +18,7 @@ interface ConversationDao {
 
     @Insert(onConflict = REPLACE)
     fun addMessage(message: Message)
+
+    @Insert
+    fun addBulkMessages(messageList: List<Message>)
 }

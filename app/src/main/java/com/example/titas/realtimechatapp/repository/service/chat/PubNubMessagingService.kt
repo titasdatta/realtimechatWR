@@ -65,7 +65,7 @@ class PubNubMessagingService @Inject constructor(): MessagingService, SubscribeC
 
     override fun getMessages() {
         mPubNubDataStream.history().channel(PUB_SUB_CHANNEL_NAME)
-                .count(100)
+                .count(75)
                 .reverse(true)
                 .async(object : PNCallback<PNHistoryResult>() {
                     override fun onResponse(result: PNHistoryResult?, status: PNStatus?) {
